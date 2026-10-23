@@ -2,7 +2,7 @@
 
 All notable changes to Lexora AI are documented here.
 
-> **Correction (2026-10-23).** Entries below describe the marketing site as
+> **Correction (2026-10-22).** Entries below describe the marketing site as
 > it was built. Several claims those sections displayed — SOC 2, ISO 27001,
 > HIPAA, and FedRAMP certifications, 2.4M+ documents, 98% satisfaction, 500+
 > firms, 47 jurisdictions, and named investors — were not true and have been

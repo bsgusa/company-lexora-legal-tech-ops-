@@ -6,7 +6,7 @@ legal paperwork. Every outbound action requires recorded user approval.**
 This repository is part of the Balamonis Group. It is a working application, not
 a finished product, and this README describes only what exists.
 
-> **Correction notice (2026-09-18, reaffirmed 2026-10-23).** Earlier versions of
+> **Correction notice (2026-09-18, reaffirmed 2026-10-22).** Earlier versions of
 > this README claimed SOC 2, ISO 27001, HIPAA, CCPA, GDPR, and FedRAMP
 > certifications; “500+ law firms” and “47 jurisdictions”; “2.4M+ documents” and
 > “98% client satisfaction”; named customer testimonials; and a proprietary
