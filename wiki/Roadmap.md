@@ -1,66 +1,53 @@
 # Product Roadmap
 
-> Last updated: May 2026 — Subject to change based on client feedback and market conditions.
+> Last updated: October 2026. This roadmap lists work, not achievements. An item
+> is only under “Done” when it is deployed and verifiable.
 
 ---
 
-## ✅ Shipped — Q1/Q2 2026 (v2.0)
+## Current state
 
-- [x] Full marketing website with 9 comprehensive sections
-- [x] LexLLM™ v2 — 40% accuracy improvement over v1
-- [x] M&A Due Diligence module (GA)
-- [x] IP & Patent Intelligence module (GA)
-- [x] SOC 2 Type II certification
-- [x] FedRAMP Authorization
-- [x] EU data residency (Frankfurt region)
-- [x] APAC data residency (Singapore, Tokyo)
-- [x] SSO via SAML 2.0 and OIDC
-- [x] 47-jurisdiction coverage milestone
+- [x] Marketing site, corrected: fabricated certifications, customers, team,
+      investors, and model claims removed
+- [x] Repository scaffolding: docs, schema, UI components
+- [x] AI Gateway integration pattern (capability tiers, no model names in code)
+- [ ] Contract-review MVP end to end
+- [ ] Billing and account management
+- [ ] Security control baseline with evidence per control
+- [ ] Privacy policy and DPA template
 
 ---
 
-## 🔨 In Progress — Q3 2026 (v2.1)
+## Explicitly not done
 
-- [ ] **Lexora Copilot** — AI sidebar for Microsoft Word and Google Docs
-- [ ] **Deposition Intelligence** — AI analysis of deposition transcripts
-- [ ] **Contract Negotiation AI** — Real-time counterparty position analysis
-- [ ] **Multilingual support** — Spanish, French, German, Mandarin, Arabic
-- [ ] **Mobile app** — iOS and Android (beta)
-- [ ] **Webhook integrations** — Real-time compliance alerts via Slack/Teams
-- [ ] **iManage integration** — Native document management sync
+These were previously presented as shipped. They are not:
 
----
-
-## 🗺️ Planned — Q4 2026 (v2.2)
-
-- [ ] **Courtroom AI** — Live hearing transcript analysis
-- [ ] **Regulatory change prediction** — Forecast upcoming regulatory shifts
-- [ ] **Client portal** — White-labeled client-facing matter management
-- [ ] **Arbitration Intelligence** — ICSID, ICC, AAA arbitration support
-- [ ] **Legal spend analytics** — Outside counsel billing intelligence
-- [ ] **Workflow automation** — No-code legal workflow builder
-- [ ] **Blockchain verification** — Immutable document provenance
+- [ ] SOC 2 Type II certification — **not held**
+- [ ] ISO 27001 certification — **not held**
+- [ ] HIPAA certification — **not held**
+- [ ] FedRAMP authorization — **not held**
+- [ ] Proprietary “LexLLM” model — **does not exist**
+- [ ] 500+ customers — **no customers claimed**
+- [ ] 47-jurisdiction native coverage — **not claimed**
+- [ ] Litigation outcome prediction — **not shipped**
 
 ---
 
-## 🔭 Future — 2027+
+## Next
 
-- [ ] **Lexora Voice** — Verbal legal research and contract dictation
-- [ ] **Autonomous deal room** — AI-managed M&A process from NDA to close
-- [ ] **Global court monitor** — Real-time monitoring of all 47 jurisdictions
-- [ ] **Predictive regulation** — AI-forecasted regulatory landscapes 12 months out
-- [ ] **Access to Justice Initiative** — Free tier for legal aid organizations
-
----
-
-## How to Influence the Roadmap
-
-We build for our clients. Your feedback directly shapes what we build next.
-
-1. **Vote** on existing feature requests in [GitHub Issues](../../issues?label=enhancement)
-2. **Submit** new feature requests using the [Feature Request template](../../issues/new?template=feature_request.md)
-3. **Schedule** a product feedback session with our team: product@lexora.ai
+- [ ] Pick one document type and one recurring decision for a measured pilot
+- [ ] Publish the evaluation method before any accuracy number
+- [ ] Document data flows and subprocessors
+- [ ] Add row-level security policies and tests for every table
+- [ ] Write the security control baseline (access, logging, encryption, backup)
 
 ---
 
-*Lexora AI ships on a continuous delivery model — major features launch monthly.*
+## How to influence the roadmap
+
+Open a GitHub issue with the workflow you want to support. We prioritise based
+on real document work, not feature count.
+
+---
+
+*© 2026 Lexora AI LLC*

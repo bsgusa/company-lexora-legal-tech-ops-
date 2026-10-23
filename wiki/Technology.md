@@ -1,95 +1,65 @@
 # Technology
 
-## LexLLM™ — Legal-Native AI
+> **Correction notice.** This page previously described a proprietary
+> “LexLLM” model trained from scratch on 500M+ legal documents, with a 200K
+> context window and claims of 99.99% uptime. **No such model exists.** The
+> description below reflects what is actually built.
 
-LexLLM™ is Lexora AI's proprietary large language model, built from scratch for legal work.
+---
 
-### Training Data
-| Source | Volume |
+## Architecture
+
+```
+Browser (static HTML/CSS/JS, React components under lexora-ui/)
+        │
+        ▼
+Supabase (Postgres, auth, edge functions, storage)
+        │
+        ▼
+Balamonis AI Gateway  ──►  commercial model provider
+```
+
+### AI access
+
+Code never names a model. A request asks the gateway for a capability tier:
+
+- `fast` — short, low-latency tasks
+- `balanced` — the default
+- `deep` — longer documents and harder reasoning
+
+The gateway chooses the provider. That keeps venture code provider-agnostic and
+keeps spend visible in one place.
+
+### Retrieval
+
+Answers are grounded in the documents a matter actually contains. Outputs quote
+the passages they rely on so a reviewer can check each one. Retrieval is not a
+substitute for a lawyer.
+
+### Approval gate
+
+Any action with an effect outside our systems — sending, filing, submitting —
+requires a recorded human approval. The system does not act on its own.
+
+---
+
+## What we do not claim
+
+| Claim | Reality |
 |---|---|
-| Court opinions & case law | 180M+ documents |
-| Contracts & agreements | 120M+ documents |
-| Statutes & regulations | 80M+ documents |
-| Legal commentary & treatises | 60M+ documents |
-| Regulatory filings | 40M+ documents |
-| Academic legal literature | 20M+ documents |
-| **Total** | **500M+ documents** |
-
-### Architecture
-- **Base model:** Custom transformer architecture optimized for long legal documents
-- **Context window:** 200K tokens (handle entire contracts in one pass)
-- **Fine-tuning:** Jurisdiction-specific models for 47 legal systems
-- **RAG layer:** Real-time retrieval from live legal databases
-- **Citator:** Integrated validity checking against all major citation systems
+| Proprietary legal model | None. No “LexLLM” |
+| 500M+ training documents | No model training |
+| 200K context window | Depends on the provider and task |
+| 99.99% uptime SLA | No SLA offered |
+| 47-jurisdiction native coverage | Coverage grows as validated |
 
 ---
 
-## System Architecture
+## Security
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    CLIENT LAYER                              │
-│         Web App  ·  API  ·  Word Plugin  ·  Mobile          │
-└───────────────────────────┬─────────────────────────────────┘
-                             │ TLS 1.3
-┌───────────────────────────▼─────────────────────────────────┐
-│                    API GATEWAY                               │
-│          Auth  ·  Rate Limiting  ·  WAF  ·  Routing         │
-└──────────┬──────────┬──────────┬──────────┬────────────────-┘
-           │          │          │          │
-    ┌──────▼──┐ ┌─────▼───┐ ┌───▼──────┐ ┌▼──────────┐
-    │Contract │ │Research │ │Compliance│ │Litigation │
-    │ Service │ │ Service │ │ Service  │ │ Service   │
-    └──────┬──┘ └─────┬───┘ └───┬──────┘ └┬──────────┘
-           └──────────┴──────────┴─────────┘
-                            │
-                   ┌────────▼────────┐
-                   │   LexLLM™ Core   │
-                   │  Inference Layer  │
-                   └────────┬─────────┘
-                            │
-              ┌─────────────┼─────────────┐
-              │             │             │
-       ┌──────▼──┐   ┌──────▼──┐   ┌─────▼───┐
-       │  Vector │   │  Graph  │   │  Legal  │
-       │   DB    │   │   DB    │   │   DB    │
-       └─────────┘   └─────────┘   └─────────┘
-```
+See **[[Security-and-Compliance]]**. In short: no third-party certification is
+held; encryption and row-level security are design goals being implemented.
 
 ---
 
-## Frontend Technology
-
-The Lexora AI website is built with **zero dependencies** for maximum performance and security:
-
-| Component | Technology | Rationale |
-|---|---|---|
-| Framework | Vanilla HTML5 | No bundle overhead, instant load |
-| Styling | CSS Custom Properties | Native theming, no preprocessor |
-| Animations | CSS Keyframes + rAF | GPU-accelerated, no library |
-| Scroll Effects | IntersectionObserver | Performant, no event listeners |
-| Particles | Canvas API | Native browser, no WebGL needed |
-| Fonts | Google Fonts CDN | Cached globally, fast load |
-
-### Performance Targets
-| Metric | Target | Status |
-|---|---|---|
-| First Contentful Paint | < 1.0s | ✅ |
-| Largest Contentful Paint | < 2.5s | ✅ |
-| Total Blocking Time | < 50ms | ✅ |
-| Cumulative Layout Shift | < 0.05 | ✅ |
-| Lighthouse Performance | > 90 | ✅ |
-| Lighthouse Accessibility | > 95 | ✅ |
-
----
-
-## Infrastructure
-
-- **Cloud:** Multi-region AWS deployment
-- **CDN:** CloudFront with 400+ edge locations
-- **Uptime SLA:** 99.99% with automatic failover
-- **Scaling:** Auto-scaling inference with GPU clusters
-- **Monitoring:** Datadog, PagerDuty, custom SLO dashboards
-- **CI/CD:** GitHub Actions → staging → canary → production
-
-See [[Deployment]] for hosting options.
+*© 2026 Lexora AI LLC*

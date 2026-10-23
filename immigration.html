@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>USCIS Immigration Filing Help — Lexora AI</title>
-  <meta name="description" content="Lexora AI helps you navigate USCIS immigration filings — I-130, I-485, I-765, N-400 and more. AI-powered immigration guidance with expert attorney review."/>
+  <meta name="description" content="Lexora AI helps you organize USCIS immigration paperwork — I-130, I-485, I-765, N-400 and more. Document-preparation software with attorney referral, not a law firm."/>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -48,7 +48,7 @@
     <div data-aos="fade-up">
       <div class="hero-badge"><span class="badge-dot"></span>AI-Powered USCIS Filing Assistance</div>
       <h1 class="hero-title">Navigate Immigration<br/><span class="gradient-text">With Confidence</span></h1>
-      <p class="hero-subtitle">Lexora AI combines artificial intelligence with licensed immigration attorneys to guide you through every USCIS form — from family petitions to naturalization. Clear steps. No confusion.</p>
+      <p class="hero-subtitle">Lexora AI helps you organize and prepare USCIS immigration paperwork — from family petitions to naturalization. Document-preparation software with optional attorney referral. It does not provide legal advice or representation.</p>
       <div class="hero-actions">
         <a href="#intake" class="btn-primary btn-lg">Start Free Intake →</a>
         <a href="https://wa.me/17272601783" class="btn-whatsapp-hero" target="_blank" rel="noopener">
@@ -57,10 +57,10 @@
         </a>
       </div>
       <div class="hero-trust">
-        <div class="trust-item">⚖️ Licensed Immigration Attorneys</div>
+        <div class="trust-item">⚖️ Attorney referral available</div>
         <div class="trust-item">🤖 AI-Powered Form Guidance</div>
-        <div class="trust-item">🔒 Attorney-Client Privilege</div>
-        <div class="trust-item">✅ USCIS Compliant</div>
+        <div class="trust-item">🔒 Private by design</div>
+        <div class="trust-item">📄 Document preparation only</div>
       </div>
     </div>
   </div>
@@ -69,10 +69,10 @@
 <!-- Stats -->
 <div class="stats-bar">
   <div class="stats-grid">
-    <div class="stat-item" data-aos="fade-up"><div class="stat-value">15K+</div><div class="stat-label">Cases Filed</div></div>
-    <div class="stat-item" data-aos="fade-up" data-aos-delay="100"><div class="stat-value">98%</div><div class="stat-label">Approval Rate</div></div>
-    <div class="stat-item" data-aos="fade-up" data-aos-delay="200"><div class="stat-value">47</div><div class="stat-label">Countries Served</div></div>
-    <div class="stat-item" data-aos="fade-up" data-aos-delay="300"><div class="stat-value">24h</div><div class="stat-label">Attorney Response</div></div>
+    <div class="stat-item" data-aos="fade-up"><div class="stat-value">6</div><div class="stat-label">USCIS forms supported</div></div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="100"><div class="stat-value">You</div><div class="stat-label">File directly with USCIS</div></div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="200"><div class="stat-value">Human</div><div class="stat-label">Review before submission</div></div>
+    <div class="stat-item" data-aos="fade-up" data-aos-delay="300"><div class="stat-value">Private</div><div class="stat-label">By design</div></div>
   </div>
 </div>
 
@@ -81,7 +81,7 @@
   <div class="section-header" data-aos="fade-up">
     <span class="section-label">USCIS Forms</span>
     <h2 class="section-title">Every Form. <span class="gradient-text">Every Pathway.</span></h2>
-    <p class="section-subtitle">We guide you through the most common USCIS immigration forms with AI assistance and licensed attorney review.</p>
+    <p class="section-subtitle">We help you organize the most common USCIS forms with AI assistance and a recorded human review before you file.</p>
   </div>
   <div class="imm-forms-grid">
 
@@ -207,7 +207,7 @@
   <div class="section-header" data-aos="fade-up">
     <span class="section-label">Free Intake</span>
     <h2 class="section-title">Start Your <span class="gradient-text">Immigration Case</span></h2>
-    <p class="section-subtitle">Complete the intake form below. A licensed immigration attorney will review your case within 24 hours — free of charge.</p>
+    <p class="section-subtitle">Complete the intake form below. We will confirm what the software can prepare for you, and where attorney review is required we can refer you to a licensed attorney.</p>
   </div>
   <div class="intake-wrap" data-aos="fade-up" data-aos-delay="100">
 
@@ -373,13 +373,13 @@
         <div class="intake-consent">
           <label class="doc-check">
             <input type="checkbox" id="consentCheck" required/>
-            I understand that submitting this form initiates a consultation request. Lexora AI and its licensed attorneys will review my case within 24 hours. Attorney-client privilege applies to all communications.
+            I understand that submitting this form initiates a request for document-preparation assistance. Lexora AI is not a law firm and does not provide legal advice or representation. Any attorney review is provided by a separate licensed attorney.
           </label>
         </div>
         <div id="intakeAlert" class="dash-alert"></div>
         <div class="intake-nav">
           <button type="button" class="btn-outline" onclick="prevStep(4)">← Back</button>
-          <button type="submit" class="btn-primary" id="submitIntakeBtn">Submit Intake for Attorney Review →</button>
+          <button type="submit" class="btn-primary" id="submitIntakeBtn">Submit Intake →</button>
         </div>
       </div>
 
@@ -389,11 +389,11 @@
     <div id="intakeSuccess" class="intake-success hidden">
       <div class="success-icon">🎉</div>
       <h2>Intake Submitted Successfully!</h2>
-      <p>A licensed immigration attorney will review your case and contact you within <strong>24 hours</strong>.</p>
+      <p>We received your intake. We will contact you to confirm next steps. If attorney review is required, we can refer you to a licensed attorney.</p>
       <div class="intake-next-steps">
         <h4>What happens next:</h4>
         <ol>
-          <li>Attorney reviews your intake form (within 24 hours)</li>
+          <li>We review your intake and confirm what the software can prepare</li>
           <li>You receive a personalized case assessment</li>
           <li>We outline your filing strategy and timeline</li>
           <li>You decide whether to proceed — no obligation</li>
@@ -418,15 +418,15 @@
   <div class="faq-grid" data-aos="fade-up" data-aos-delay="100">
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">How is Lexora AI different from filing directly with USCIS? <span>+</span></button>
-      <div class="faq-a">Lexora AI doesn't replace USCIS — we guide you through the process. Our AI reviews your situation, a licensed attorney checks your forms before submission, and we help you avoid the most common mistakes that lead to RFEs and denials. You still file with USCIS, but with confidence.</div>
+      <div class="faq-a">Lexora AI doesn't replace USCIS. We help you organize your information and prepare the forms, and a person reviews the output before you file. You file with USCIS yourself. We are not a law firm and do not provide legal advice.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Is my information confidential? <span>+</span></button>
-      <div class="faq-a">Yes. All communications with Lexora AI's licensed immigration attorneys are protected by attorney-client privilege. Your data is stored with AES-256 encryption in your chosen region and is never shared with third parties or used to train our AI models.</div>
+      <div class="faq-a">We treat intake information as confidential and do not share it with third parties or use it to train models. Note that attorney-client privilege applies only to communications with a licensed attorney you engage — not to a document-preparation tool.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">How much does immigration filing assistance cost? <span>+</span></button>
-      <div class="faq-a">The initial intake and attorney consultation is free. Our service fees depend on the complexity of your case and the forms involved. Pricing is transparent and agreed upon before any work begins. USCIS filing fees are separate and paid directly to USCIS.</div>
+      <div class="faq-a">Initial intake is free. Our service fees depend on the forms involved and are agreed before any work begins. USCIS filing fees are separate and paid directly to USCIS. If you need legal advice, a licensed attorney must be engaged separately.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What is a "priority date" and does it matter for my case? <span>+</span></button>
@@ -434,11 +434,11 @@
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What is a Request for Evidence (RFE) and how do you help? <span>+</span></button>
-      <div class="faq-a">An RFE is a USCIS request for additional information to decide your case. They must be answered within the deadline (typically 87 days) or your case may be denied. Lexora AI specializes in crafting thorough, well-documented RFE responses that address all USCIS concerns and maximize your approval chances.</div>
+      <div class="faq-a">An RFE is a USCIS request for additional information to decide your case. It must be answered within the deadline or the case may be denied. We can help you organize and draft a response for review. We do not guarantee any outcome.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">Can you help if my application was already denied? <span>+</span></button>
-      <div class="faq-a">Yes. Depending on the reason for denial, you may be able to file a Motion to Reopen, a Motion to Reconsider, or an appeal to the Administrative Appeals Office (AAO) or Board of Immigration Appeals (BIA). Our attorneys assess the denial notice and recommend the best path forward.</div>
+      <div class="faq-a">Depending on the reason for denial, options may include a Motion to Reopen, a Motion to Reconsider, or an appeal. Those are legal decisions. We can help you organize the documents, and we can refer you to a licensed attorney to assess the denial notice.</div>
     </div>
   </div>
 </section>
@@ -448,7 +448,7 @@
   <div class="cta-inner" style="max-width:800px;margin:0 auto;text-align:center" data-aos="zoom-in">
     <span class="section-label">Ready to Start?</span>
     <h2 class="section-title" style="margin-top:.8rem">Let's Navigate This <span class="gradient-text">Together</span></h2>
-    <p class="section-subtitle" style="margin-bottom:2rem">Free intake. Licensed attorneys. AI-powered guidance. Start your immigration journey today.</p>
+    <p class="section-subtitle" style="margin-bottom:2rem">Free intake. Document-preparation software. Attorney referral where needed. Start today.</p>
     <div class="cta-actions">
       <a href="#intake" class="btn-primary btn-lg">Start Free Intake →</a>
       <a href="https://wa.me/17272601783" class="btn-whatsapp-hero" target="_blank" rel="noopener">💬 WhatsApp Us Now</a>
@@ -593,7 +593,7 @@ document.getElementById('intakeForm').addEventListener('submit', async (e) => {
     }));
   }
 
-  btn.textContent = 'Submit Intake for Attorney Review →';
+  btn.textContent = 'Submit Intake →';
   btn.disabled = false;
   if (error) {
     alertEl.textContent = 'Submission error: ' + error.message + '. Please try again or call (727) 260-1783.';

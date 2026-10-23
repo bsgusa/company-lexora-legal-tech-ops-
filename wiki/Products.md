@@ -1,136 +1,103 @@
 # Lexora AI Products
 
-Lexora AI delivers six integrated AI products covering the full spectrum of legal practice.
+> **Correction notice.** This page previously claimed shipped modules, 94–97%
+> accuracy, 34% win-rate improvements, 200+ frameworks, and “47,000 documents in
+> 72 hours (real client case)”. Those were fabrications. The table below states
+> what each module is and its real status.
+
+---
+
+## Status at a glance
+
+| Module | Status |
+|---|---|
+| Contract Intelligence | In development |
+| Litigation Research | Research — outcome prediction not shipped |
+| Regulatory Research | In development |
+| Document Research | In development |
+| IP Research | Planned |
+| M&A Due Diligence | Planned |
 
 ---
 
 ## ⚖️ Contract Intelligence
 
-**The most comprehensive AI contract platform on the market.**
+Read and redline contracts with AI assistance that surfaces clauses, quotes the
+source text, and drafts suggested changes for a lawyer to approve.
 
-### What it does
-- Instantly review, analyze, and redline any contract type
-- Automated risk scoring with clause-by-clause breakdown
-- Clause library comparison against your playbook
-- Multi-party negotiation tracking and version control
-- Jurisdiction-specific compliance checking
+**What it does**
+- Extracts clauses and flags risk for review
+- Quotes the source text behind each flag
+- Drafts suggested redlines
+- Requires human approval before anything is sent
 
-### Supported Contract Types
-120+ contract types including:
-- NDAs & Confidentiality Agreements
-- Master Service Agreements (MSA)
-- Software License Agreements (SLA)
-- Employment & Contractor Agreements
-- Merger & Acquisition Agreements
-- Real Estate Leases & Purchase Agreements
-- Loan & Credit Agreements
-- IP Assignment & Licensing Agreements
-
-### Key Metrics
-- **97%** reduction in contract review time
-- **< 4 seconds** to analyze a 500-page contract
-- **94%** accuracy on risk flag detection
+**Status:** in development. No accuracy figure is claimed.
 
 ---
 
-## 🔮 Litigation Intelligence
+## 🔮 Litigation Research
 
-**Predict outcomes. Build winning strategies. Never be surprised in court.**
+Research case law and surface the factors that drive outcomes, presented for a
+lawyer to weigh.
 
-### What it does
-- Case outcome prediction engine (trained on 50M+ case outcomes)
-- Precedent discovery across all federal and state court systems
-- Judge analytics — understand judicial tendencies and preferences
-- Opposing counsel analysis — historical patterns and strategies
-- Automated brief drafting with cite verification
+**What it does**
+- Searches the document set you provide
+- Summarises relevant passages with citations
+- Organises factors; does not predict a result
 
-### Key Metrics
-- **34%** improvement in client win rates
-- **10x** faster legal research
-- Coverage: US, UK, EU, Australia, Canada
+**Status:** research. Outcome prediction is **not shipped** and no accuracy is
+claimed. This is not legal advice.
 
 ---
 
-## 📋 Regulatory Compliance
+## 📋 Regulatory Research
 
-**Stay ahead of regulations. Never miss a compliance obligation.**
+Organise regulatory research and track the obligations you configure.
 
-### Frameworks Covered (200+)
-- **Privacy:** GDPR, CCPA, CPRA, LGPD, PIPEDA, PDPA
-- **Financial:** SOX, Dodd-Frank, MiFID II, Basel III, AML/KYC
-- **Healthcare:** HIPAA, HITECH, FDA 21 CFR Part 11
-- **Employment:** FLSA, EEOC, ADA, FMLA
-- **Industry:** FCPA, SEC, FINRA, PCI-DSS
+**What it does**
+- Stores the frameworks you add
+- Drafts gap-analysis worksheets for review
+- Records an audit trail of changes
+- Drafts policy text for review
 
-### What it does
-- Real-time regulatory change monitoring
-- Automated compliance gap analysis
-- Policy and procedure auto-generation
-- Audit trail management and reporting
-- Multi-jurisdiction compliance dashboard
+**Status:** in development. Configuring a framework is not a certification that
+you comply with it.
 
 ---
 
-## 🔍 Legal Research Engine
+## 🔍 Document Research
 
-**Research that takes days. Done in seconds.**
+Search your own documents in natural language and see the passages an answer
+relies on.
 
-### What it does
-- Natural language search across all legal databases
-- Cross-jurisdictional case law synthesis
-- Citator with real-time validity checks
-- Automatic legal memo generation
-- Shepardizing and KeyCite equivalent
-
-### Coverage
-- All US federal and state courts
-- UK Supreme Court, Court of Appeal, High Court
-- All EU member state courts
-- European Court of Justice
-- International arbitration databases
+**Status:** in development.
 
 ---
 
-## 💡 IP & Patent Intelligence
+## 💡 IP Research
 
-**Protect your innovations. Understand the landscape.**
+Organise patent and trademark research, build a portfolio view, and draft
+freedom-to-operate worksheets for attorney review.
 
-### What it does
-- Prior art search automation (USPTO, EPO, WIPO, JPO)
-- Patent landscape and whitespace analysis
-- Freedom-to-Operate (FTO) reports
-- Portfolio valuation and benchmarking
-- Open-source license compliance scanning
+**Status:** planned.
 
 ---
 
 ## 🏢 M&A Due Diligence
 
-**Close deals faster. Miss nothing.**
+Batch-review a data room and produce a red-flag list and risk matrix for the deal
+team to verify.
 
-### What it does
-- Automated data room document intake and classification
-- Red flag identification and priority ranking
-- Risk matrix auto-generation
-- Deal comparison against historical benchmarks
-- Integration readiness assessment
-
-### Key Metrics
-- **47,000 documents** reviewed in 72 hours (real client case)
-- **3x** faster deal closing
-- Covers data rooms on: Intralinks, Datasite, Firmex, iDeals
+**Status:** planned. The “$2.3B / 47,000 documents / 72 hours” story that
+previously appeared here was invented and has been removed.
 
 ---
 
 ## Pricing
 
-All products are available individually or as the **Full Platform** bundle.
+Tiered pricing is listed on the site. Confirm current availability with
+**support@lexora.ai** before relying on any tier.
 
-| Tier | Best For | Contact |
-|---|---|---|
-| **Starter** | Solo practitioners & small firms | sales@lexora.ai |
-| **Professional** | Mid-size firms (10-50 attorneys) | sales@lexora.ai |
-| **Enterprise** | Large firms & in-house teams | enterprise@lexora.ai |
-| **Government** | Public sector & legal aid | government@lexora.ai |
+---
 
-Book a personalized demo: **[lexora.ai/demo](#)**
+*© 2026 Lexora AI LLC*

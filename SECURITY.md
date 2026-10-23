@@ -1,114 +1,85 @@
 # Security Policy
 
-## Lexora AI Security Commitment
+## Lexora AI security position
 
-Security is foundational to everything we build at Lexora AI. Legal data is among the most sensitive information in the world — we hold ourselves to the highest possible security standards.
+Lexora AI LLC builds document-preparation and review software. Legal data is
+sensitive, so we would rather state a narrow truth than a broad claim.
+
+**We hold no third-party security certification.** Specifically: no SOC 2, no
+ISO 27001, no HIPAA certification, no FedRAMP authorization. CCPA/GDPR work is a
+readiness effort, not a certification. If any page or document says otherwise,
+that page is wrong and should be corrected.
 
 ---
 
-## Supported Versions
+## Supported versions
 
 | Version | Supported |
 |---|---|
-| 2.x.x (current) | ✅ Active security updates |
-| 1.x.x | ⚠️ Critical fixes only |
-| < 1.0 | ❌ Not supported |
+| Current `main` | Active fixes |
+| Older tags | Not supported |
 
 ---
 
-## Certifications & Compliance
+## Certification status (honest)
 
-| Standard | Status | Scope |
+| Standard | Status | Notes |
 |---|---|---|
-| SOC 2 Type II | ✅ Certified | Security, Availability, Confidentiality |
-| ISO 27001 | ✅ Certified | Information Security Management |
-| GDPR | ✅ Compliant | EU data processing |
-| HIPAA | ✅ Compliant | Healthcare data handling |
-| CCPA | ✅ Compliant | California consumer data |
-| FedRAMP | ✅ Authorized | US government cloud services |
+| SOC 2 Type II | **Not held** | No audit performed |
+| ISO 27001 | **Not held** | No certification |
+| GDPR | **Readiness only** | Not a certification |
+| HIPAA | **Not held** | Do not send PHI |
+| CCPA/CPRA | **Readiness only** | Not a certification |
+| FedRAMP | **Not authorized** | Not a government-authorized service |
 
 ---
 
-## Security Architecture
+## Controls we are building
 
-### Encryption
-- **At rest:** AES-256-GCM encryption for all stored data
-- **In transit:** TLS 1.3 for all network communications
-- **Key management:** HSM-backed key storage with automatic rotation
+These are design intentions and partial implementations, not audited facts:
 
-### Access Control
-- Role-based access control (RBAC) with principle of least privilege
-- Multi-factor authentication enforced on all accounts
-- Session management with automatic timeout
-- IP allowlisting for enterprise deployments
-
-### Data Isolation
-- Your data **never** trains our models
-- Complete tenant isolation — no data co-mingling
-- Data residency options: US (us-east-1, us-west-2), EU (eu-west-1), UK, APAC (ap-southeast-1)
-- Attorney-client privilege preserved by design
-
-### Infrastructure
-- Multi-region deployment with automatic failover
-- 99.99% uptime SLA
-- DDoS protection and WAF on all endpoints
-- Continuous security scanning and penetration testing
-- Zero-trust network architecture
+- **Encryption** — in transit and at rest.
+- **Access control** — database access is intended to be governed by row-level
+  security rather than application code alone.
+- **Secrets** — environment variables and a secret store only; never in code.
+- **AI calls** — made with the end user's session; no service-role key in client
+  code.
+- **Approvals** — any outbound action requires recorded human approval.
+- **Training** — customer documents are not used to train models.
 
 ---
 
-## Reporting a Vulnerability
+## Reporting a vulnerability
 
-We take all security reports seriously and will respond within **24 hours**.
+**Please do not open a public GitHub issue for a security vulnerability.**
 
-### How to Report
+Email **security@lexora.ai**.
 
-**Please do NOT open a public GitHub issue for security vulnerabilities.**
+Include:
 
-Instead, report vulnerabilities via:
+- Type of vulnerability (e.g. XSS, SQL injection, auth bypass)
+- Affected file paths or endpoints
+- Reproduction steps
+- Proof of concept, if available
+- Potential impact
 
-**Email:** security@lexora.ai *(preferred)*
+### Response targets
 
-Include the following in your report:
-- Type of vulnerability (e.g., XSS, SQL injection, authentication bypass)
-- Full paths of source file(s) related to the issue
-- Step-by-step reproduction instructions
-- Proof-of-concept or exploit code (if available)
-- Potential impact assessment
-
-### Response Timeline
-
-| Stage | Timeline |
+| Stage | Target |
 |---|---|
-| Initial acknowledgment | Within 24 hours |
-| Vulnerability confirmation | Within 72 hours |
-| Severity assessment | Within 5 business days |
-| Fix development | Depends on severity |
-| Security advisory published | After fix is deployed |
+| Acknowledgement | 3 business days |
+| Triage | 10 business days |
+| Fix | Depends on severity |
 
-### Severity Classification
-
-| Level | Description | Response Time |
-|---|---|---|
-| 🔴 Critical | Data breach, authentication bypass, RCE | 24 hours |
-| 🟠 High | Privilege escalation, significant data exposure | 72 hours |
-| 🟡 Medium | Limited data exposure, DoS | 7 days |
-| 🟢 Low | Minor information disclosure | 30 days |
+These are targets, not a contractual SLA.
 
 ---
 
-## Bug Bounty Program
+## Bug bounty
 
-Lexora AI operates a private bug bounty program for security researchers. If you discover a qualifying vulnerability, you may be eligible for a reward.
-
-Contact **security@lexora.ai** to request an invitation to our bug bounty program.
-
----
-
-## Security Hall of Fame
-
-We recognize and thank security researchers who help keep Lexora AI secure. See our [Security Hall of Fame](https://lexora.ai/security/hall-of-fame) for recognized contributors.
+We do not currently operate a paid bug bounty programme. We will credit
+responsible reports if you would like to be named.
 
 ---
 
-© 2026 Lexora AI, Inc. — security@lexora.ai
+© 2026 Lexora AI LLC — security@lexora.ai
