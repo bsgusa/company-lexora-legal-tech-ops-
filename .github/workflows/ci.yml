@@ -23,7 +23,13 @@ jobs:
 
       - name: Check for exposed secrets
         run: |
-          if grep -rE '(sbp_[A-Za-z0-9]+|ghp_[A-Za-z0-9]+|sk-[A-Za-z0-9]+)' --include='*.ts' --include='*.tsx' --include='*.js' --include='*.json' --include='*.md' . ; then
+          # Length AND boundary are both required. Length alone still matched
+          # "after-task-async-storage-instance"; boundary alone still matched
+          # "sk-1". Real keys are preceded by a quote, space, or '='.
+          if grep -rE '(^|[^A-Za-z0-9])(sbp_[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9_-]{20,})' \
+               --include='*.ts' --include='*.tsx' --include='*.js' --include='*.json' \
+               --include='*.md' --include='*.yml' --include='*.yaml' \
+               --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next . ; then
             echo "::error::Potential secret detected in repo. Remove before merging."
             exit 1
           fi
@@ -31,5 +37,16 @@ jobs:
       - name: TypeScript check (if tsc available)
         run: npx tsc --noEmit 2>/dev/null || echo "tsc not configured — skipping"
 
-      - name: Build / serve smoke test
-        run: npm run dev
+      - name: Static site smoke test
+        run: |
+          # Bounded: start a server, fetch the page, stop. `npm run dev` runs
+          # `npx serve .`, which never exits and would hang the job.
+          python3 -m http.server 4173 --bind 127.0.0.1 >/dev/null 2>&1 &
+          PID=$!
+          trap 'kill "$PID" 2>/dev/null || true' EXIT
+          for _ in $(seq 1 20); do
+            curl -sf http://127.0.0.1:4173/index.html >/dev/null && break
+            sleep 0.5
+          done
+          curl -sf http://127.0.0.1:4173/index.html >/dev/null
+          echo "index.html served OK"
