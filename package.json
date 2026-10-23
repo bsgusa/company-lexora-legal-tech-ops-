@@ -6,5 +6,8 @@
   "scripts": {
     "start": "npx serve .",
     "dev": "npx serve ."
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0"
   }
 }

@@ -28,7 +28,7 @@ function Particles() {
             opacity: 0,
           }}
           animate={{
-            y: [0, -window?.innerHeight ?? -900],
+            y: [0, -900],
             opacity: [0, p.opacity, p.opacity * 0.5, 0],
             x: [0, (Math.random() - 0.5) * 100],
           }}

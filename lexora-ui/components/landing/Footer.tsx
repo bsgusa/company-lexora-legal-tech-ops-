@@ -1,6 +1,7 @@
 "use client";
 
-import { Zap, Github, Twitter, Linkedin } from "lucide-react";
+import { Zap } from "lucide-react";
+import { IconBrandGithub, IconBrandX, IconBrandLinkedin } from "@tabler/icons-react";
 
 const links = {
   Product: ["Features", "Pricing", "Changelog", "Roadmap"],
@@ -30,7 +31,7 @@ export default function Footer() {
               can focus on what matters.
             </p>
             <div className="flex items-center gap-3">
-              {[Twitter, Github, Linkedin].map((Icon, i) => (
+              {[IconBrandX, IconBrandGithub, IconBrandLinkedin].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
